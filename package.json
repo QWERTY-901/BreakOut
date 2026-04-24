@@ -1,15 +1,31 @@
 {
-  "name": "breakoutusingreact",
+  "homepage": "http://QWERTY-901.github.io/BreakOut",
+  "name": "breakout-game",
   "private": true,
-  "version": "0.0.0",
+  "version": "1.0.0",
+  "description": "A modern Breakout game built with React and Vite featuring 5 levels of increasing difficulty",
+  "keywords": ["breakout", "game", "react", "vite", "javascript", "canvas", "arcade"],
+  "author": "QWERTY-901",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/QWERTY-901/BreakOut.git"
+  },
+  "bugs": {
+    "url": "https://github.com/QWERTY-901/BreakOut/issues"
+  },
   "type": "module",
   "scripts": {
     "dev": "vite",
     "build": "vite build",
     "lint": "eslint .",
+    "lint:fix": "eslint . --fix",
     "preview": "vite preview",
     "test": "echo \"No tests specified\" && exit 0",
-    "deploy": "npm run build && gh-pages -d dist"
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d dist",
+    "clean": "rm -rf dist node_modules/.vite",
+    "start": "npm run dev"
   },
   "dependencies": {
     "react": "^19.2.5",
@@ -26,6 +42,7 @@
     "eslint": "^10.2.1",
     "eslint-plugin-react-hooks": "^7.1.1",
     "eslint-plugin-react-refresh": "^0.5.2",
+    "gh-pages": "^6.3.0",
     "globals": "^17.5.0",
     "vite": "^8.0.10"
   }
